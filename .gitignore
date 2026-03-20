@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude/bkit
+.claude/
+.bkit/
+
+# raw photos
+*.JPG
+*.jpg
+!public/**/*.jpg

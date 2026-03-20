@@ -1,65 +1,46 @@
-import Image from "next/image";
+import { siteConfig } from "@/data/siteConfig";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <main className="flex flex-1 items-center justify-center px-6 py-20">
+      <div className="mx-auto max-w-5xl flex flex-col md:flex-row items-center gap-12">
+        {/* Profile Photo */}
+        <div className="shrink-0">
+          <div className="relative w-52 h-64 md:w-56 md:h-68 rounded-xl overflow-hidden border-2 border-border ring-2 ring-accent/20 bg-bg-secondary">
+            <img
+              src="/images/profile.jpg"
+              alt={siteConfig.name}
+              className="w-full h-full object-cover scale-[3.5] object-[100%_75%]"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="absolute inset-0 rounded-xl" style={{ boxShadow: 'inset 0 0 40px 15px rgba(0,0,0,0.7)' }} />
+          </div>
         </div>
-      </main>
-    </div>
+
+        {/* Info */}
+        <div className="text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+            {siteConfig.name}
+          </h1>
+          <div className="text-text-secondary leading-relaxed max-w-xl mb-8 space-y-3">
+            {siteConfig.bio.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+
+          {/* Research Interests Tags */}
+          <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-8">
+            {siteConfig.researchInterests.map((interest) => (
+              <span
+                key={interest}
+                className="px-3 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent border border-accent/20"
+              >
+                {interest}
+              </span>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </main>
   );
 }
