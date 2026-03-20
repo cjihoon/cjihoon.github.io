@@ -20,7 +20,7 @@ export const researchAreas: ResearchArea[] = [
       "Using causal inference methods to evaluate the impact of policies.",
   },
   {
-    title: "Electric Vehicles & Charging Infrastructure",
+    title: "Transport Economics & Electric Vehicles",
     description:
       "Analyzing the economic effects of electric vehicle adoption and charging infrastructure development.",
   },

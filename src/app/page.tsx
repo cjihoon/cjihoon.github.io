@@ -6,11 +6,11 @@ export default function Home() {
       <div className="mx-auto max-w-5xl flex flex-col md:flex-row items-center gap-12">
         {/* Profile Photo */}
         <div className="shrink-0">
-          <div className="relative w-52 h-64 md:w-56 md:h-68 rounded-xl overflow-hidden border-2 border-border ring-2 ring-accent/20 bg-bg-secondary">
+          <div className="relative w-64 h-64 md:w-56 md:h-68 rounded-xl overflow-hidden border-2 border-border ring-2 ring-accent/20 bg-bg-secondary">
             <img
               src="/images/profile.jpg"
               alt={siteConfig.name}
-              className="w-full h-full object-cover scale-[3.5] object-[100%_75%]"
+              className="w-full h-full object-cover scale-[1.8] object-[20%_90%]"
             />
             <div className="absolute inset-0 rounded-xl" style={{ boxShadow: 'inset 0 0 40px 15px rgba(0,0,0,0.7)' }} />
           </div>
