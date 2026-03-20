@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Jihoon Choi",
   bio: [
     "Hi! I am a PhD student in the Schar School of Policy and Government at George Mason University.",
-    "My research focuses on the intersection of energy economics and labor markets, using applied microeconomic methods and causal inference to study how policy-driven shifts in the energy sector affect workers and communities. I am also interested in the economic and policy dimensions of electric vehicle adoption.",
+    "My research focuses on the intersection of environmental economics and labor markets, using applied microeconomic methods and causal inference to study how policy-driven shifts in the energy sector affect workers and communities. I am also interested in the economic and policy dimensions of electric vehicle adoption.",
     "I hold an M.A. in Development Policy from KDI School of Public Policy and Management and a B.A. in Economics from Chung-Ang University.",
     "Before I restarted my academic journey, I served as a military officer in Republic of Korea Air Force Headquarters. Also, I managed a local dessert cafe in Sejong, Republic of Korea, with my wife.",
     "I am a full-time dad of two lovely sons.",
